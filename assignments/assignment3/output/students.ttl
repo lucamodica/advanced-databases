@@ -1,0 +1,3334 @@
+@prefix : <urn:webprotege:ontology:9757d584-dec3-428d-9dc7-593bd0ec008c#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://webprotege.stanford.edu/courseBelongsTo> a owl:ObjectProperty ;
+    rdfs:label "courseBelongsTo" ;
+    rdfs:domain <http://webprotege.stanford.edu/Course> ;
+    rdfs:range <http://webprotege.stanford.edu/Division> ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://webprotege.stanford.edu/courseCode> a owl:DatatypeProperty ;
+    rdfs:label "courseCode" ;
+    rdfs:domain <http://webprotege.stanford.edu/Course> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/courseInstanceAcademicYear> a owl:DatatypeProperty ;
+    rdfs:label "courseInstanceAcademicYear" ;
+    rdfs:domain <http://webprotege.stanford.edu/CourseInstance> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/courseInstanceContains> a owl:ObjectProperty ;
+    rdfs:label "courseInstanceContains" ;
+    rdfs:domain <http://webprotege.stanford.edu/CourseInstance> ;
+    rdfs:range <http://webprotege.stanford.edu/Registration> .
+
+<http://webprotege.stanford.edu/courseInstanceHasPlan> a owl:ObjectProperty ;
+    rdfs:label "courseInstanceHasPlan" ;
+    rdfs:domain <http://webprotege.stanford.edu/CourseInstance> ;
+    rdfs:range <http://webprotege.stanford.edu/CoursePlanning> .
+
+<http://webprotege.stanford.edu/courseInstanceOf> a owl:ObjectProperty ;
+    rdfs:label "courseInstanceOf" ;
+    rdfs:domain <http://webprotege.stanford.edu/CourseInstance> ;
+    rdfs:range <http://webprotege.stanford.edu/Course> .
+
+<http://webprotege.stanford.edu/courseName> a owl:DatatypeProperty ;
+    rdfs:label "courseName" ;
+    rdfs:domain <http://webprotege.stanford.edu/Course> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/courseOwnedBy> a owl:ObjectProperty ;
+    rdfs:label "courseOwnedBy" ;
+    rdfs:domain <http://webprotege.stanford.edu/Course> ;
+    rdfs:range <http://webprotege.stanford.edu/Programme> ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://webprotege.stanford.edu/courseType> a owl:DatatypeProperty ;
+    rdfs:label "courseType" ;
+    rdfs:domain <http://webprotege.stanford.edu/ProgrammeCourse> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/departmentName> a owl:DatatypeProperty ;
+    rdfs:label "departmentName" ;
+    rdfs:domain <http://webprotege.stanford.edu/Department> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/divisionIn> a owl:ObjectProperty ;
+    rdfs:label "divisionIn" ;
+    rdfs:domain <http://webprotege.stanford.edu/Division> ;
+    rdfs:range <http://webprotege.stanford.edu/Department> ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://webprotege.stanford.edu/divisionName> a owl:DatatypeProperty ;
+    rdfs:label "divisionName" ;
+    rdfs:domain <http://webprotege.stanford.edu/Division> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/enrollmentYear> a owl:DatatypeProperty ;
+    rdfs:label "enrollementYear" ;
+    rdfs:domain <http://webprotege.stanford.edu/StudentEnrollment> ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/grade> a owl:DatatypeProperty ;
+    rdfs:label "grade" ;
+    rdfs:comment "For students who have completed the course, the grade is one of “5”, “4” or “3”." ;
+    rdfs:domain <http://webprotege.stanford.edu/Registration> ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/graduated> a owl:DatatypeProperty ;
+    rdfs:label "graduated" ;
+    rdfs:domain <http://webprotege.stanford.edu/Student> ;
+    rdfs:range xsd:boolean ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/hours> a owl:DatatypeProperty ;
+    rdfs:label "hours" ;
+    rdfs:domain <http://webprotege.stanford.edu/TeacherHours> ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/hoursStatus> a owl:DatatypeProperty ;
+    rdfs:label "hoursStatus" ;
+    rdfs:comment "It can be either \"assigned\" or \"reported\"" ;
+    rdfs:domain <http://webprotege.stanford.edu/TeacherHours> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/instanceId> a owl:DatatypeProperty ;
+    rdfs:label "instanceId" ;
+    rdfs:domain <http://webprotege.stanford.edu/CourseInstance> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/planningNumStudents> a owl:DatatypeProperty ;
+    rdfs:label "planningNumStudents" ;
+    rdfs:domain <http://webprotege.stanford.edu/CoursePlanning> ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/programmeBelongsTo> a owl:ObjectProperty ;
+    rdfs:label "programmeBelongsTo" ;
+    rdfs:domain <http://webprotege.stanford.edu/Programme> ;
+    rdfs:range <http://webprotege.stanford.edu/Department> ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://webprotege.stanford.edu/programmeCode> a owl:DatatypeProperty ;
+    rdfs:label "programmeCode" ;
+    rdfs:domain <http://webprotege.stanford.edu/Programme> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/programmeCourseAcademicYear> a owl:DatatypeProperty ;
+    rdfs:label "programmeCourseAcademicYear" ;
+    rdfs:domain <http://webprotege.stanford.edu/ProgrammeCourse> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/programmeName> a owl:DatatypeProperty ;
+    rdfs:label "programmeName" ;
+    rdfs:domain <http://webprotege.stanford.edu/Programme> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/programmeType> a owl:DatatypeProperty ;
+    rdfs:label "programmeType" ;
+    rdfs:comment "It can be either \"master\" or \"bachelor\"" ;
+    rdfs:domain <http://webprotege.stanford.edu/Programme> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/seniorPlannedHours> a owl:DatatypeProperty ;
+    rdfs:label "seniorPlannedHours" ;
+    rdfs:domain <http://webprotege.stanford.edu/CoursePlanning> ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/seniorTeacherDirectorOf> a owl:ObjectProperty ;
+    rdfs:label "seniorTeacherDirectorOf" ;
+    rdfs:domain <http://webprotege.stanford.edu/SeniorTeacher> ;
+    rdfs:range <http://webprotege.stanford.edu/Programme> ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://webprotege.stanford.edu/seniorTeacherExamines> a owl:ObjectProperty ;
+    rdfs:label "seniorTeacherExamines" ;
+    rdfs:domain <http://webprotege.stanford.edu/SeniorTeacher> ;
+    rdfs:range <http://webprotege.stanford.edu/CourseInstance> ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://webprotege.stanford.edu/status> a owl:DatatypeProperty ;
+    rdfs:label "status" ;
+    rdfs:comment "status is one of: “not started”, “registered”, “completed”, “withdrawn”." ;
+    rdfs:domain <http://webprotege.stanford.edu/Registration> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/studentId> a owl:DatatypeProperty ;
+    rdfs:label "studentId" ;
+    rdfs:domain <http://webprotege.stanford.edu/Student> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/studentName> a owl:DatatypeProperty ;
+    rdfs:label "studentName" ;
+    rdfs:domain <http://webprotege.stanford.edu/Student> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/studentRegistered> a owl:ObjectProperty ;
+    rdfs:label "studentRegistered" ;
+    rdfs:domain <http://webprotege.stanford.edu/Student> ;
+    rdfs:range <http://webprotege.stanford.edu/Registration> ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://webprotege.stanford.edu/studyPeriod> a owl:DatatypeProperty ;
+    rdfs:label "studyPeriod" ;
+    rdfs:domain <http://webprotege.stanford.edu/CourseInstance> ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/studyYear> a owl:DatatypeProperty ;
+    rdfs:label "studyYear" ;
+    rdfs:domain <http://webprotege.stanford.edu/ProgrammeCourse> ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/teacherBelongsTo> a owl:ObjectProperty ;
+    rdfs:label "teacherBelongsTo" ;
+    rdfs:domain <http://webprotege.stanford.edu/Teacher> ;
+    rdfs:range <http://webprotege.stanford.edu/Division> .
+
+<http://webprotege.stanford.edu/teacherId> a owl:DatatypeProperty ;
+    rdfs:label "teacherId" ;
+    rdfs:domain <http://webprotege.stanford.edu/SeniorTeacher> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/teacherName> a owl:DatatypeProperty ;
+    rdfs:label "teacherName" ;
+    rdfs:domain <http://webprotege.stanford.edu/SeniorTeacher> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://webprotege.stanford.edu/teacherPlannedHours> a owl:DatatypeProperty ;
+    rdfs:label "teacherPlannedHours" ;
+    rdfs:domain <http://webprotege.stanford.edu/CoursePlanning> ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<urn:webprotege:ontology:9757d584-dec3-428d-9dc7-593bd0ec008c> a owl:Ontology .
+
+:Student_1 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19891205-0000"^^xsd:string,
+        "19970308-0000"^^xsd:string ;
+    :studentName "Student 1"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10054 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:Student_10 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19861018-0009"^^xsd:string,
+        "19950606-0009"^^xsd:string ;
+    :studentName "Student 10"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10042 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:Student_100 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19871128-0099"^^xsd:string,
+        "19960621-0099"^^xsd:string ;
+    :studentName "Student 100"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10074 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:Student_101 a :Student ;
+    :graduated false ;
+    :studentId "19980203-0100"^^xsd:string ;
+    :studentName "Student 101"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:Student_102 a :Student ;
+    :graduated false ;
+    :studentId "19960101-0101"^^xsd:string ;
+    :studentName "Student 102"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10034 ] .
+
+:Student_103 a :Student ;
+    :graduated false ;
+    :studentId "19950821-0102"^^xsd:string ;
+    :studentName "Student 103"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10011 ] .
+
+:Student_104 a :Student ;
+    :graduated false ;
+    :studentId "19970806-0103"^^xsd:string ;
+    :studentName "Student 104"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10032 ] .
+
+:Student_105 a :Student ;
+    :graduated false ;
+    :studentId "19960123-0104"^^xsd:string ;
+    :studentName "Student 105"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10061 ] .
+
+:Student_106 a :Student ;
+    :graduated false ;
+    :studentId "19970630-0105"^^xsd:string ;
+    :studentName "Student 106"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:Student_107 a :Student ;
+    :graduated false ;
+    :studentId "19950316-0106"^^xsd:string ;
+    :studentName "Student 107"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:Student_108 a :Student ;
+    :graduated false ;
+    :studentId "19981226-0107"^^xsd:string ;
+    :studentName "Student 108"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10032 ] .
+
+:Student_109 a :Student ;
+    :graduated false ;
+    :studentId "19960818-0108"^^xsd:string ;
+    :studentName "Student 109"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10054 ] .
+
+:Student_11 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19860829-0010"^^xsd:string,
+        "19951026-0010"^^xsd:string ;
+    :studentName "Student 11"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10011 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:Student_110 a :Student ;
+    :graduated false ;
+    :studentId "19970805-0109"^^xsd:string ;
+    :studentName "Student 110"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:Student_111 a :Student ;
+    :graduated false ;
+    :studentId "19960118-0110"^^xsd:string ;
+    :studentName "Student 111"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:Student_112 a :Student ;
+    :graduated false ;
+    :studentId "19950511-0111"^^xsd:string ;
+    :studentName "Student 112"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:Student_113 a :Student ;
+    :graduated false ;
+    :studentId "19990530-0112"^^xsd:string ;
+    :studentName "Student 113"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10073 ] .
+
+:Student_114 a :Student ;
+    :graduated false ;
+    :studentId "19961117-0113"^^xsd:string ;
+    :studentName "Student 114"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10001 ] .
+
+:Student_115 a :Student ;
+    :graduated false ;
+    :studentId "19981221-0114"^^xsd:string ;
+    :studentName "Student 115"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10013 ] .
+
+:Student_116 a :Student ;
+    :graduated false ;
+    :studentId "19950924-0115"^^xsd:string ;
+    :studentName "Student 116"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:Student_117 a :Student ;
+    :graduated false ;
+    :studentId "19970112-0116"^^xsd:string ;
+    :studentName "Student 117"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:Student_118 a :Student ;
+    :graduated false ;
+    :studentId "19960911-0117"^^xsd:string ;
+    :studentName "Student 118"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:Student_119 a :Student ;
+    :graduated false ;
+    :studentId "19970925-0118"^^xsd:string ;
+    :studentName "Student 119"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10013 ] .
+
+:Student_12 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19850527-0011"^^xsd:string,
+        "19990305-0011"^^xsd:string ;
+    :studentName "Student 12"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10041 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10013 ] .
+
+:Student_120 a :Student ;
+    :graduated false ;
+    :studentId "19961108-0119"^^xsd:string ;
+    :studentName "Student 120"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:Student_121 a :Student ;
+    :graduated false ;
+    :studentId "19960829-0120"^^xsd:string ;
+    :studentName "Student 121"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10054 ] .
+
+:Student_122 a :Student ;
+    :graduated false ;
+    :studentId "19990317-0121"^^xsd:string ;
+    :studentName "Student 122"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:Student_123 a :Student ;
+    :graduated false ;
+    :studentId "19990521-0122"^^xsd:string ;
+    :studentName "Student 123"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10073 ] .
+
+:Student_124 a :Student ;
+    :graduated false ;
+    :studentId "19950709-0123"^^xsd:string ;
+    :studentName "Student 124"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10013 ] .
+
+:Student_125 a :Student ;
+    :graduated false ;
+    :studentId "19950214-0124"^^xsd:string ;
+    :studentName "Student 125"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:Student_126 a :Student ;
+    :graduated false ;
+    :studentId "19950817-0125"^^xsd:string ;
+    :studentName "Student 126"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10054 ] .
+
+:Student_127 a :Student ;
+    :graduated false ;
+    :studentId "19990405-0126"^^xsd:string ;
+    :studentName "Student 127"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10054 ] .
+
+:Student_128 a :Student ;
+    :graduated false ;
+    :studentId "19970422-0127"^^xsd:string ;
+    :studentName "Student 128"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:Student_129 a :Student ;
+    :graduated false ;
+    :studentId "19950225-0128"^^xsd:string ;
+    :studentName "Student 129"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:Student_13 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19891217-0012"^^xsd:string,
+        "19970727-0012"^^xsd:string ;
+    :studentName "Student 13"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10051 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:Student_130 a :Student ;
+    :graduated false ;
+    :studentId "19980410-0129"^^xsd:string ;
+    :studentName "Student 130"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10054 ] .
+
+:Student_131 a :Student ;
+    :graduated false ;
+    :studentId "19980617-0130"^^xsd:string ;
+    :studentName "Student 131"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:Student_132 a :Student ;
+    :graduated false ;
+    :studentId "19970117-0131"^^xsd:string ;
+    :studentName "Student 132"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10011 ] .
+
+:Student_133 a :Student ;
+    :graduated false ;
+    :studentId "19950225-0132"^^xsd:string ;
+    :studentName "Student 133"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:Student_134 a :Student ;
+    :graduated false ;
+    :studentId "19961005-0133"^^xsd:string ;
+    :studentName "Student 134"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:Student_135 a :Student ;
+    :graduated false ;
+    :studentId "19960809-0134"^^xsd:string ;
+    :studentName "Student 135"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10001 ] .
+
+:Student_136 a :Student ;
+    :graduated false ;
+    :studentId "19990713-0135"^^xsd:string ;
+    :studentName "Student 136"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:Student_137 a :Student ;
+    :graduated false ;
+    :studentId "19990626-0136"^^xsd:string ;
+    :studentName "Student 137"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:Student_138 a :Student ;
+    :graduated false ;
+    :studentId "19980203-0137"^^xsd:string ;
+    :studentName "Student 138"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:Student_139 a :Student ;
+    :graduated false ;
+    :studentId "19980720-0138"^^xsd:string ;
+    :studentName "Student 139"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:Student_14 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870613-0013"^^xsd:string,
+        "19990219-0013"^^xsd:string ;
+    :studentName "Student 14"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10051 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:Student_140 a :Student ;
+    :graduated false ;
+    :studentId "19951130-0139"^^xsd:string ;
+    :studentName "Student 140"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10073 ] .
+
+:Student_141 a :Student ;
+    :graduated false ;
+    :studentId "19950317-0140"^^xsd:string ;
+    :studentName "Student 141"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10013 ] .
+
+:Student_142 a :Student ;
+    :graduated false ;
+    :studentId "19980421-0141"^^xsd:string ;
+    :studentName "Student 142"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10032 ] .
+
+:Student_143 a :Student ;
+    :graduated false ;
+    :studentId "19960406-0142"^^xsd:string ;
+    :studentName "Student 143"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:Student_144 a :Student ;
+    :graduated false ;
+    :studentId "19950604-0143"^^xsd:string ;
+    :studentName "Student 144"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:Student_145 a :Student ;
+    :graduated false ;
+    :studentId "19971113-0144"^^xsd:string ;
+    :studentName "Student 145"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10071 ] .
+
+:Student_146 a :Student ;
+    :graduated false ;
+    :studentId "19980928-0145"^^xsd:string ;
+    :studentName "Student 146"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10071 ] .
+
+:Student_147 a :Student ;
+    :graduated false ;
+    :studentId "19970619-0146"^^xsd:string ;
+    :studentName "Student 147"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:Student_148 a :Student ;
+    :graduated false ;
+    :studentId "19980920-0147"^^xsd:string ;
+    :studentName "Student 148"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10013 ] .
+
+:Student_149 a :Student ;
+    :graduated false ;
+    :studentId "19950818-0148"^^xsd:string ;
+    :studentName "Student 149"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10061 ] .
+
+:Student_15 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19861017-0014"^^xsd:string,
+        "19970318-0014"^^xsd:string ;
+    :studentName "Student 15"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10051 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10011 ] .
+
+:Student_150 a :Student ;
+    :graduated false ;
+    :studentId "19980804-0149"^^xsd:string ;
+    :studentName "Student 150"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:Student_151 a :Student ;
+    :graduated false ;
+    :studentId "19950331-0150"^^xsd:string ;
+    :studentName "Student 151"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10073 ] .
+
+:Student_152 a :Student ;
+    :graduated false ;
+    :studentId "19960607-0151"^^xsd:string ;
+    :studentName "Student 152"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:Student_153 a :Student ;
+    :graduated false ;
+    :studentId "19961024-0152"^^xsd:string ;
+    :studentName "Student 153"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:Student_154 a :Student ;
+    :graduated false ;
+    :studentId "19961222-0153"^^xsd:string ;
+    :studentName "Student 154"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:Student_155 a :Student ;
+    :graduated false ;
+    :studentId "19990226-0154"^^xsd:string ;
+    :studentName "Student 155"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:Student_156 a :Student ;
+    :graduated false ;
+    :studentId "19980329-0155"^^xsd:string ;
+    :studentName "Student 156"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10054 ] .
+
+:Student_157 a :Student ;
+    :graduated false ;
+    :studentId "19990116-0156"^^xsd:string ;
+    :studentName "Student 157"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:Student_158 a :Student ;
+    :graduated false ;
+    :studentId "19980709-0157"^^xsd:string ;
+    :studentName "Student 158"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:Student_159 a :Student ;
+    :graduated false ;
+    :studentId "19970510-0158"^^xsd:string ;
+    :studentName "Student 159"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:Student_16 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19860125-0015"^^xsd:string,
+        "19970109-0015"^^xsd:string ;
+    :studentName "Student 16"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2011"^^xsd:string ;
+            :courseInstanceOf :Course10042 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:Student_160 a :Student ;
+    :graduated false ;
+    :studentId "19951130-0159"^^xsd:string ;
+    :studentName "Student 160"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10034 ] .
+
+:Student_161 a :Student ;
+    :graduated false ;
+    :studentId "19960901-0160"^^xsd:string ;
+    :studentName "Student 161"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:Student_162 a :Student ;
+    :graduated false ;
+    :studentId "19960912-0161"^^xsd:string ;
+    :studentName "Student 162"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:Student_163 a :Student ;
+    :graduated false ;
+    :studentId "19971106-0162"^^xsd:string ;
+    :studentName "Student 163"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:Student_164 a :Student ;
+    :graduated false ;
+    :studentId "19990518-0163"^^xsd:string ;
+    :studentName "Student 164"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10061 ] .
+
+:Student_165 a :Student ;
+    :graduated false ;
+    :studentId "19960523-0164"^^xsd:string ;
+    :studentName "Student 165"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10034 ] .
+
+:Student_166 a :Student ;
+    :graduated false ;
+    :studentId "19980712-0165"^^xsd:string ;
+    :studentName "Student 166"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:Student_167 a :Student ;
+    :graduated false ;
+    :studentId "19970524-0166"^^xsd:string ;
+    :studentName "Student 167"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10032 ] .
+
+:Student_168 a :Student ;
+    :graduated false ;
+    :studentId "19990307-0167"^^xsd:string ;
+    :studentName "Student 168"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10032 ] .
+
+:Student_169 a :Student ;
+    :graduated false ;
+    :studentId "19960221-0168"^^xsd:string ;
+    :studentName "Student 169"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10054 ] .
+
+:Student_17 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19871102-0016"^^xsd:string,
+        "19950717-0016"^^xsd:string ;
+    :studentName "Student 17"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2011"^^xsd:string ;
+            :courseInstanceOf :Course10014 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:Student_170 a :Student ;
+    :graduated false ;
+    :studentId "19970404-0169"^^xsd:string ;
+    :studentName "Student 170"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:Student_171 a :Student ;
+    :graduated false ;
+    :studentId "19970318-0170"^^xsd:string ;
+    :studentName "Student 171"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:Student_172 a :Student ;
+    :graduated false ;
+    :studentId "19950925-0171"^^xsd:string ;
+    :studentName "Student 172"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:Student_173 a :Student ;
+    :graduated false ;
+    :studentId "19950427-0172"^^xsd:string ;
+    :studentName "Student 173"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10073 ] .
+
+:Student_174 a :Student ;
+    :graduated false ;
+    :studentId "19970118-0173"^^xsd:string ;
+    :studentName "Student 174"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:Student_175 a :Student ;
+    :graduated false ;
+    :studentId "19990708-0174"^^xsd:string ;
+    :studentName "Student 175"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:Student_176 a :Student ;
+    :graduated false ;
+    :studentId "19960216-0175"^^xsd:string ;
+    :studentName "Student 176"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:Student_177 a :Student ;
+    :graduated false ;
+    :studentId "19950913-0176"^^xsd:string ;
+    :studentName "Student 177"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:Student_178 a :Student ;
+    :graduated false ;
+    :studentId "19970822-0177"^^xsd:string ;
+    :studentName "Student 178"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10011 ] .
+
+:Student_179 a :Student ;
+    :graduated false ;
+    :studentId "19960224-0178"^^xsd:string ;
+    :studentName "Student 179"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:Student_18 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870714-0017"^^xsd:string,
+        "19990705-0017"^^xsd:string ;
+    :studentName "Student 18"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10013 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:Student_180 a :Student ;
+    :graduated false ;
+    :studentId "19950831-0179"^^xsd:string ;
+    :studentName "Student 180"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:Student_181 a :Student ;
+    :graduated false ;
+    :studentId "19961009-0180"^^xsd:string ;
+    :studentName "Student 181"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10071 ] .
+
+:Student_182 a :Student ;
+    :graduated false ;
+    :studentId "19950912-0181"^^xsd:string ;
+    :studentName "Student 182"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10073 ] .
+
+:Student_183 a :Student ;
+    :graduated false ;
+    :studentId "19980926-0182"^^xsd:string ;
+    :studentName "Student 183"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:Student_184 a :Student ;
+    :graduated false ;
+    :studentId "19950707-0183"^^xsd:string ;
+    :studentName "Student 184"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:Student_185 a :Student ;
+    :graduated false ;
+    :studentId "19980628-0184"^^xsd:string ;
+    :studentName "Student 185"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:Student_186 a :Student ;
+    :graduated false ;
+    :studentId "19950212-0185"^^xsd:string ;
+    :studentName "Student 186"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:Student_187 a :Student ;
+    :graduated false ;
+    :studentId "19970907-0186"^^xsd:string ;
+    :studentName "Student 187"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10071 ] .
+
+:Student_188 a :Student ;
+    :graduated false ;
+    :studentId "19980219-0187"^^xsd:string ;
+    :studentName "Student 188"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:Student_189 a :Student ;
+    :graduated false ;
+    :studentId "19970601-0188"^^xsd:string ;
+    :studentName "Student 189"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:Student_19 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19850426-0018"^^xsd:string,
+        "19971007-0018"^^xsd:string ;
+    :studentName "Student 19"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10072 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10071 ] .
+
+:Student_190 a :Student ;
+    :graduated false ;
+    :studentId "19980928-0189"^^xsd:string ;
+    :studentName "Student 190"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10013 ] .
+
+:Student_191 a :Student ;
+    :graduated false ;
+    :studentId "19980617-0190"^^xsd:string ;
+    :studentName "Student 191"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:Student_192 a :Student ;
+    :graduated false ;
+    :studentId "19990709-0191"^^xsd:string ;
+    :studentName "Student 192"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:Student_193 a :Student ;
+    :graduated false ;
+    :studentId "19990624-0192"^^xsd:string ;
+    :studentName "Student 193"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:Student_194 a :Student ;
+    :graduated false ;
+    :studentId "19951001-0193"^^xsd:string ;
+    :studentName "Student 194"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10013 ] .
+
+:Student_195 a :Student ;
+    :graduated false ;
+    :studentId "19980906-0194"^^xsd:string ;
+    :studentName "Student 195"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:Student_196 a :Student ;
+    :graduated false ;
+    :studentId "19980824-0195"^^xsd:string ;
+    :studentName "Student 196"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10011 ] .
+
+:Student_197 a :Student ;
+    :graduated false ;
+    :studentId "19970416-0196"^^xsd:string ;
+    :studentName "Student 197"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:Student_198 a :Student ;
+    :graduated false ;
+    :studentId "19970121-0197"^^xsd:string ;
+    :studentName "Student 198"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:Student_199 a :Student ;
+    :graduated false ;
+    :studentId "19981018-0198"^^xsd:string ;
+    :studentName "Student 199"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:Student_2 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19880117-0001"^^xsd:string,
+        "19960213-0001"^^xsd:string ;
+    :studentName "Student 2"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10011 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:Student_20 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870816-0019"^^xsd:string,
+        "19990124-0019"^^xsd:string ;
+    :studentName "Student 20"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10041 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2011"^^xsd:string ;
+            :courseInstanceOf :Course10071 ] .
+
+:Student_200 a :Student ;
+    :graduated false ;
+    :studentId "19990323-0199"^^xsd:string ;
+    :studentName "Student 200"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:Student_21 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19880404-0020"^^xsd:string,
+        "19990831-0020"^^xsd:string ;
+    :studentName "Student 21"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10061 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:Student_22 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19860729-0021"^^xsd:string,
+        "19971122-0021"^^xsd:string ;
+    :studentName "Student 22"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10011 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10054 ] .
+
+:Student_23 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19850205-0022"^^xsd:string,
+        "19980414-0022"^^xsd:string ;
+    :studentName "Student 23"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10073 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2011"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:Student_24 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19891130-0023"^^xsd:string,
+        "19980609-0023"^^xsd:string ;
+    :studentName "Student 24"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10072 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:Student_25 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19860208-0024"^^xsd:string,
+        "19980212-0024"^^xsd:string ;
+    :studentName "Student 25"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10042 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2011"^^xsd:string ;
+            :courseInstanceOf :Course10073 ] .
+
+:Student_26 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19851213-0025"^^xsd:string,
+        "19990805-0025"^^xsd:string ;
+    :studentName "Student 26"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10071 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10051 ] .
+
+:Student_27 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870624-0026"^^xsd:string,
+        "19970609-0026"^^xsd:string ;
+    :studentName "Student 27"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10061 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:Student_28 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870406-0027"^^xsd:string,
+        "19951123-0027"^^xsd:string ;
+    :studentName "Student 28"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2011"^^xsd:string ;
+            :courseInstanceOf :Course10052 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10073 ] .
+
+:Student_29 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870512-0028"^^xsd:string,
+        "19960701-0028"^^xsd:string ;
+    :studentName "Student 29"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10052 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:Student_3 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19860309-0002"^^xsd:string,
+        "19960328-0002"^^xsd:string ;
+    :studentName "Student 3"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10013 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:Student_30 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19890225-0029"^^xsd:string,
+        "19960220-0029"^^xsd:string ;
+    :studentName "Student 30"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10021 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10061 ] .
+
+:Student_31 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19880205-0030"^^xsd:string,
+        "19990211-0030"^^xsd:string ;
+    :studentName "Student 31"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2011"^^xsd:string ;
+            :courseInstanceOf :Course10042 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10051 ] .
+
+:Student_32 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870215-0031"^^xsd:string,
+        "19961018-0031"^^xsd:string ;
+    :studentName "Student 32"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2015"^^xsd:string ;
+            :courseInstanceOf :Course10073 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:Student_33 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19890513-0032"^^xsd:string,
+        "19960307-0032"^^xsd:string ;
+    :studentName "Student 33"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10034 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2011"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:Student_34 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19881204-0033"^^xsd:string,
+        "19960822-0033"^^xsd:string ;
+    :studentName "Student 34"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10041 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:Student_35 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19890416-0034"^^xsd:string,
+        "19961012-0034"^^xsd:string ;
+    :studentName "Student 35"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10042 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2015"^^xsd:string ;
+            :courseInstanceOf :Course10051 ] .
+
+:Student_36 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19891011-0035"^^xsd:string,
+        "19960610-0035"^^xsd:string ;
+    :studentName "Student 36"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10052 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10032 ] .
+
+:Student_37 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19890927-0036"^^xsd:string,
+        "19990302-0036"^^xsd:string ;
+    :studentName "Student 37"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10051 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10061 ] .
+
+:Student_38 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870422-0037"^^xsd:string,
+        "19950801-0037"^^xsd:string ;
+    :studentName "Student 38"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10032 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:Student_39 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19871023-0038"^^xsd:string,
+        "19960222-0038"^^xsd:string ;
+    :studentName "Student 39"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10051 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10034 ] .
+
+:Student_4 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19850305-0003"^^xsd:string,
+        "19980905-0003"^^xsd:string ;
+    :studentName "Student 4"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10012 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2015"^^xsd:string ;
+            :courseInstanceOf :Course10032 ] .
+
+:Student_40 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19881020-0039"^^xsd:string,
+        "19960828-0039"^^xsd:string ;
+    :studentName "Student 40"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10031 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2015"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:Student_41 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19881216-0040"^^xsd:string,
+        "19960118-0040"^^xsd:string ;
+    :studentName "Student 41"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10012 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2015"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:Student_42 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870720-0041"^^xsd:string,
+        "19980206-0041"^^xsd:string ;
+    :studentName "Student 42"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10012 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2015"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:Student_43 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870421-0042"^^xsd:string,
+        "19991130-0042"^^xsd:string ;
+    :studentName "Student 43"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10074 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2011"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:Student_44 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19880818-0043"^^xsd:string,
+        "19981023-0043"^^xsd:string ;
+    :studentName "Student 44"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10073 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:Student_45 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870414-0044"^^xsd:string,
+        "19950824-0044"^^xsd:string ;
+    :studentName "Student 45"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10011 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:Student_46 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19880204-0045"^^xsd:string,
+        "19961220-0045"^^xsd:string ;
+    :studentName "Student 46"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10012 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10011 ] .
+
+:Student_47 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19880807-0046"^^xsd:string,
+        "19950308-0046"^^xsd:string ;
+    :studentName "Student 47"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10041 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:Student_48 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19890219-0047"^^xsd:string,
+        "19990824-0047"^^xsd:string ;
+    :studentName "Student 48"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10034 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10071 ] .
+
+:Student_49 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870412-0048"^^xsd:string,
+        "19970301-0048"^^xsd:string ;
+    :studentName "Student 49"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10034 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:Student_5 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19860211-0004"^^xsd:string,
+        "19970413-0004"^^xsd:string ;
+    :studentName "Student 5"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10052 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:Student_50 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19860119-0049"^^xsd:string,
+        "19980102-0049"^^xsd:string ;
+    :studentName "Student 50"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10014 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10001 ] .
+
+:Student_51 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19880522-0050"^^xsd:string,
+        "19970918-0050"^^xsd:string ;
+    :studentName "Student 51"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10061 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2015"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:Student_52 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19851109-0051"^^xsd:string,
+        "19981214-0051"^^xsd:string ;
+    :studentName "Student 52"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10034 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:Student_53 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19890611-0052"^^xsd:string,
+        "19970721-0052"^^xsd:string ;
+    :studentName "Student 53"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10031 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:Student_54 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19860118-0053"^^xsd:string,
+        "19951006-0053"^^xsd:string ;
+    :studentName "Student 54"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10071 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10073 ] .
+
+:Student_55 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19850504-0054"^^xsd:string,
+        "19990720-0054"^^xsd:string ;
+    :studentName "Student 55"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2011"^^xsd:string ;
+            :courseInstanceOf :Course10053 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:Student_56 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19890302-0055"^^xsd:string,
+        "19971008-0055"^^xsd:string ;
+    :studentName "Student 56"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10032 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10032 ] .
+
+:Student_57 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870427-0056"^^xsd:string,
+        "19980524-0056"^^xsd:string ;
+    :studentName "Student 57"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10073 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:Student_58 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19861117-0057"^^xsd:string,
+        "19961122-0057"^^xsd:string ;
+    :studentName "Student 58"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10073 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10013 ] .
+
+:Student_59 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19891109-0058"^^xsd:string,
+        "19950522-0058"^^xsd:string ;
+    :studentName "Student 59"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10041 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:Student_6 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19880122-0005"^^xsd:string,
+        "19990816-0005"^^xsd:string ;
+    :studentName "Student 6"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10053 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:Student_60 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19890705-0059"^^xsd:string,
+        "19970711-0059"^^xsd:string ;
+    :studentName "Student 60"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2015"^^xsd:string ;
+            :courseInstanceOf :Course10053 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10034 ] .
+
+:Student_61 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19891221-0060"^^xsd:string,
+        "19950829-0060"^^xsd:string ;
+    :studentName "Student 61"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10033 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:Student_62 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19860128-0061"^^xsd:string,
+        "19980221-0061"^^xsd:string ;
+    :studentName "Student 62"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10033 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10054 ] .
+
+:Student_63 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19850704-0062"^^xsd:string,
+        "19960928-0062"^^xsd:string ;
+    :studentName "Student 63"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10033 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:Student_64 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19860412-0063"^^xsd:string,
+        "19950319-0063"^^xsd:string ;
+    :studentName "Student 64"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10053 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:Student_65 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870918-0064"^^xsd:string,
+        "19970309-0064"^^xsd:string ;
+    :studentName "Student 65"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10042 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10001 ] .
+
+:Student_66 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19880307-0065"^^xsd:string,
+        "19960315-0065"^^xsd:string ;
+    :studentName "Student 66"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2015"^^xsd:string ;
+            :courseInstanceOf :Course10072 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10073 ] .
+
+:Student_67 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19861216-0066"^^xsd:string,
+        "19980425-0066"^^xsd:string ;
+    :studentName "Student 67"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10054 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2015"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:Student_68 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19850124-0067"^^xsd:string,
+        "19960924-0067"^^xsd:string ;
+    :studentName "Student 68"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2015"^^xsd:string ;
+            :courseInstanceOf :Course10052 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:Student_69 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19880118-0068"^^xsd:string,
+        "19951121-0068"^^xsd:string ;
+    :studentName "Student 69"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10051 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:Student_7 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19850603-0006"^^xsd:string,
+        "19990626-0006"^^xsd:string ;
+    :studentName "Student 7"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10041 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:Student_70 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870727-0069"^^xsd:string,
+        "19980719-0069"^^xsd:string ;
+    :studentName "Student 70"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10061 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:Student_71 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19851126-0070"^^xsd:string,
+        "19950124-0070"^^xsd:string ;
+    :studentName "Student 71"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10054 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2015"^^xsd:string ;
+            :courseInstanceOf :Course10032 ] .
+
+:Student_72 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19861011-0071"^^xsd:string,
+        "19990301-0071"^^xsd:string ;
+    :studentName "Student 72"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10011 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:Student_73 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19850522-0072"^^xsd:string,
+        "19990313-0072"^^xsd:string ;
+    :studentName "Student 73"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10001 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10051 ] .
+
+:Student_74 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19871111-0073"^^xsd:string,
+        "19990702-0073"^^xsd:string ;
+    :studentName "Student 74"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10041 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:Student_75 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19861115-0074"^^xsd:string,
+        "19950309-0074"^^xsd:string ;
+    :studentName "Student 75"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10031 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10073 ] .
+
+:Student_76 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19890303-0075"^^xsd:string,
+        "19990711-0075"^^xsd:string ;
+    :studentName "Student 76"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10012 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10034 ] .
+
+:Student_77 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19890622-0076"^^xsd:string,
+        "19961023-0076"^^xsd:string ;
+    :studentName "Student 77"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10021 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:Student_78 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19850206-0077"^^xsd:string,
+        "19981204-0077"^^xsd:string ;
+    :studentName "Student 78"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10061 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10001 ] .
+
+:Student_79 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19860516-0078"^^xsd:string,
+        "19960414-0078"^^xsd:string ;
+    :studentName "Student 79"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10071 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:Student_8 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19860222-0007"^^xsd:string,
+        "19950304-0007"^^xsd:string ;
+    :studentName "Student 8"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10071 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10054 ] .
+
+:Student_80 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19891104-0079"^^xsd:string,
+        "19950404-0079"^^xsd:string ;
+    :studentName "Student 80"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10033 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:Student_81 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870128-0080"^^xsd:string,
+        "19950321-0080"^^xsd:string ;
+    :studentName "Student 81"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10021 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:Student_82 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19850709-0081"^^xsd:string,
+        "19970428-0081"^^xsd:string ;
+    :studentName "Student 82"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10054 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2011"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:Student_83 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870507-0082"^^xsd:string,
+        "19980418-0082"^^xsd:string ;
+    :studentName "Student 83"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10012 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10013 ] .
+
+:Student_84 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870308-0083"^^xsd:string,
+        "19970820-0083"^^xsd:string ;
+    :studentName "Student 84"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10041 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10032 ] .
+
+:Student_85 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19851112-0084"^^xsd:string,
+        "19950907-0084"^^xsd:string ;
+    :studentName "Student 85"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10021 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2015"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:Student_86 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19861015-0085"^^xsd:string,
+        "19950703-0085"^^xsd:string ;
+    :studentName "Student 86"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10061 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10073 ] .
+
+:Student_87 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870304-0086"^^xsd:string,
+        "19961124-0086"^^xsd:string ;
+    :studentName "Student 87"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10071 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10032 ] .
+
+:Student_88 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870901-0087"^^xsd:string,
+        "19980805-0087"^^xsd:string ;
+    :studentName "Student 88"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2011"^^xsd:string ;
+            :courseInstanceOf :Course10051 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10071 ] .
+
+:Student_89 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870813-0088"^^xsd:string,
+        "19970721-0088"^^xsd:string ;
+    :studentName "Student 89"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10042 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10061 ] .
+
+:Student_9 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19860330-0008"^^xsd:string,
+        "19991025-0008"^^xsd:string ;
+    :studentName "Student 9"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10033 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:Student_90 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19871013-0089"^^xsd:string,
+        "19970904-0089"^^xsd:string ;
+    :studentName "Student 90"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10032 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10011 ] .
+
+:Student_91 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19881120-0090"^^xsd:string,
+        "19960609-0090"^^xsd:string ;
+    :studentName "Student 91"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10014 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:Student_92 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870209-0091"^^xsd:string,
+        "19990918-0091"^^xsd:string ;
+    :studentName "Student 92"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10073 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10071 ] .
+
+:Student_93 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870921-0092"^^xsd:string,
+        "19980925-0092"^^xsd:string ;
+    :studentName "Student 93"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10074 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10051 ] .
+
+:Student_94 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19890202-0093"^^xsd:string,
+        "19960227-0093"^^xsd:string ;
+    :studentName "Student 94"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10014 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10071 ] .
+
+:Student_95 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19890106-0094"^^xsd:string,
+        "19990531-0094"^^xsd:string ;
+    :studentName "Student 95"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10011 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10054 ] .
+
+:Student_96 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870418-0095"^^xsd:string,
+        "19970408-0095"^^xsd:string ;
+    :studentName "Student 96"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10011 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2011"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:Student_97 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19870304-0096"^^xsd:string,
+        "19990427-0096"^^xsd:string ;
+    :studentName "Student 97"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10011 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:Student_98 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19860321-0097"^^xsd:string,
+        "19990518-0097"^^xsd:string ;
+    :studentName "Student 98"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2015"^^xsd:string ;
+            :courseInstanceOf :Course10041 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:Student_99 a :Student ;
+    :graduated false,
+        true ;
+    :studentId "19871019-0098"^^xsd:string,
+        "19960704-0098"^^xsd:string ;
+    :studentName "Student 99"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10001 ],
+        [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10071 ] .
+
+:TA_100 a :Student ;
+    :graduated false ;
+    :studentId "19930709-0100"^^xsd:string ;
+    :studentName "TA 100"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:TA_101 a :Student ;
+    :graduated false ;
+    :studentId "19921218-0101"^^xsd:string ;
+    :studentName "TA 101"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:TA_102 a :Student ;
+    :graduated false ;
+    :studentId "19910404-0102"^^xsd:string ;
+    :studentName "TA 102"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10051 ] .
+
+:TA_103 a :Student ;
+    :graduated false ;
+    :studentId "19910403-0103"^^xsd:string ;
+    :studentName "TA 103"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:TA_104 a :Student ;
+    :graduated false ;
+    :studentId "19900119-0104"^^xsd:string ;
+    :studentName "TA 104"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10061 ] .
+
+:TA_105 a :Student ;
+    :graduated false ;
+    :studentId "19900307-0105"^^xsd:string ;
+    :studentName "TA 105"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10032 ] .
+
+:TA_106 a :Student ;
+    :graduated false ;
+    :studentId "19930414-0106"^^xsd:string ;
+    :studentName "TA 106"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:TA_107 a :Student ;
+    :graduated false ;
+    :studentId "19920316-0107"^^xsd:string ;
+    :studentName "TA 107"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:TA_108 a :Student ;
+    :graduated false ;
+    :studentId "19921123-0108"^^xsd:string ;
+    :studentName "TA 108"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10073 ] .
+
+:TA_109 a :Student ;
+    :graduated false ;
+    :studentId "19920917-0109"^^xsd:string ;
+    :studentName "TA 109"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:TA_110 a :Student ;
+    :graduated false ;
+    :studentId "19930906-0110"^^xsd:string ;
+    :studentName "TA 110"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:TA_111 a :Student ;
+    :graduated false ;
+    :studentId "19901026-0111"^^xsd:string ;
+    :studentName "TA 111"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10051 ] .
+
+:TA_112 a :Student ;
+    :graduated false ;
+    :studentId "19900430-0112"^^xsd:string ;
+    :studentName "TA 112"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10071 ] .
+
+:TA_113 a :Student ;
+    :graduated false ;
+    :studentId "19900701-0113"^^xsd:string ;
+    :studentName "TA 113"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:TA_114 a :Student ;
+    :graduated false ;
+    :studentId "19900902-0114"^^xsd:string ;
+    :studentName "TA 114"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:TA_115 a :Student ;
+    :graduated false ;
+    :studentId "19920505-0115"^^xsd:string ;
+    :studentName "TA 115"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10032 ] .
+
+:TA_116 a :Student ;
+    :graduated false ;
+    :studentId "19900818-0116"^^xsd:string ;
+    :studentName "TA 116"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10073 ] .
+
+:TA_117 a :Student ;
+    :graduated false ;
+    :studentId "19930512-0117"^^xsd:string ;
+    :studentName "TA 117"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:TA_118 a :Student ;
+    :graduated false ;
+    :studentId "19931226-0118"^^xsd:string ;
+    :studentName "TA 118"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:TA_119 a :Student ;
+    :graduated false ;
+    :studentId "19901011-0119"^^xsd:string ;
+    :studentName "TA 119"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:TA_120 a :Student ;
+    :graduated false ;
+    :studentId "19921127-0120"^^xsd:string ;
+    :studentName "TA 120"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:TA_121 a :Student ;
+    :graduated false ;
+    :studentId "19920320-0121"^^xsd:string ;
+    :studentName "TA 121"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10013 ] .
+
+:TA_122 a :Student ;
+    :graduated false ;
+    :studentId "19910822-0122"^^xsd:string ;
+    :studentName "TA 122"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:TA_123 a :Student ;
+    :graduated false ;
+    :studentId "19900909-0123"^^xsd:string ;
+    :studentName "TA 123"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:TA_124 a :Student ;
+    :graduated false ;
+    :studentId "19900616-0124"^^xsd:string ;
+    :studentName "TA 124"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10001 ] .
+
+:TA_125 a :Student ;
+    :graduated false ;
+    :studentId "19901219-0125"^^xsd:string ;
+    :studentName "TA 125"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:TA_126 a :Student ;
+    :graduated false ;
+    :studentId "19900723-0126"^^xsd:string ;
+    :studentName "TA 126"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10061 ] .
+
+:TA_127 a :Student ;
+    :graduated false ;
+    :studentId "19930616-0127"^^xsd:string ;
+    :studentName "TA 127"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:TA_128 a :Student ;
+    :graduated false ;
+    :studentId "19910927-0128"^^xsd:string ;
+    :studentName "TA 128"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:TA_129 a :Student ;
+    :graduated false ;
+    :studentId "19921002-0129"^^xsd:string ;
+    :studentName "TA 129"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:TA_130 a :Student ;
+    :graduated false ;
+    :studentId "19900801-0130"^^xsd:string ;
+    :studentName "TA 130"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:TA_131 a :Student ;
+    :graduated false ;
+    :studentId "19910403-0131"^^xsd:string ;
+    :studentName "TA 131"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:TA_132 a :Student ;
+    :graduated false ;
+    :studentId "19930326-0132"^^xsd:string ;
+    :studentName "TA 132"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:TA_133 a :Student ;
+    :graduated false ;
+    :studentId "19910101-0133"^^xsd:string ;
+    :studentName "TA 133"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:TA_134 a :Student ;
+    :graduated false ;
+    :studentId "19900511-0134"^^xsd:string ;
+    :studentName "TA 134"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10034 ] .
+
+:TA_135 a :Student ;
+    :graduated false ;
+    :studentId "19930302-0135"^^xsd:string ;
+    :studentName "TA 135"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:TA_136 a :Student ;
+    :graduated false ;
+    :studentId "19910921-0136"^^xsd:string ;
+    :studentName "TA 136"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:TA_137 a :Student ;
+    :graduated false ;
+    :studentId "19930919-0137"^^xsd:string ;
+    :studentName "TA 137"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10001 ] .
+
+:TA_138 a :Student ;
+    :graduated false ;
+    :studentId "19900701-0138"^^xsd:string ;
+    :studentName "TA 138"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10034 ] .
+
+:TA_139 a :Student ;
+    :graduated false ;
+    :studentId "19930221-0139"^^xsd:string ;
+    :studentName "TA 139"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:TA_140 a :Student ;
+    :graduated false ;
+    :studentId "19900211-0140"^^xsd:string ;
+    :studentName "TA 140"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:TA_31 a :Student ;
+    :graduated true ;
+    :studentId "19781125-0031"^^xsd:string ;
+    :studentName "TA 31"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2005"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:TA_32 a :Student ;
+    :graduated true ;
+    :studentId "19750906-0032"^^xsd:string ;
+    :studentName "TA 32"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2000"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:TA_33 a :Student ;
+    :graduated true ;
+    :studentId "19750705-0033"^^xsd:string ;
+    :studentName "TA 33"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2005"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:TA_34 a :Student ;
+    :graduated true ;
+    :studentId "19761024-0034"^^xsd:string ;
+    :studentName "TA 34"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2000"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:TA_35 a :Student ;
+    :graduated true ;
+    :studentId "19780602-0035"^^xsd:string ;
+    :studentName "TA 35"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2008"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:TA_36 a :Student ;
+    :graduated true ;
+    :studentId "19750331-0036"^^xsd:string ;
+    :studentName "TA 36"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2004"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:TA_37 a :Student ;
+    :graduated true ;
+    :studentId "19750220-0037"^^xsd:string ;
+    :studentName "TA 37"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2008"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:TA_38 a :Student ;
+    :graduated true ;
+    :studentId "19790702-0038"^^xsd:string ;
+    :studentName "TA 38"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10011 ] .
+
+:TA_39 a :Student ;
+    :graduated true ;
+    :studentId "19751018-0039"^^xsd:string ;
+    :studentName "TA 39"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2009"^^xsd:string ;
+            :courseInstanceOf :Course10061 ] .
+
+:TA_40 a :Student ;
+    :graduated true ;
+    :studentId "19771013-0040"^^xsd:string ;
+    :studentName "TA 40"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2005"^^xsd:string ;
+            :courseInstanceOf :Course10061 ] .
+
+:TA_41 a :Student ;
+    :graduated true ;
+    :studentId "19790708-0041"^^xsd:string ;
+    :studentName "TA 41"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2011"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:TA_42 a :Student ;
+    :graduated true ;
+    :studentId "19770713-0042"^^xsd:string ;
+    :studentName "TA 42"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2005"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:TA_43 a :Student ;
+    :graduated true ;
+    :studentId "19750512-0043"^^xsd:string ;
+    :studentName "TA 43"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2010"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:TA_44 a :Student ;
+    :graduated true ;
+    :studentId "19761020-0044"^^xsd:string ;
+    :studentName "TA 44"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2008"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:TA_45 a :Student ;
+    :graduated true ;
+    :studentId "19790717-0045"^^xsd:string ;
+    :studentName "TA 45"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:TA_46 a :Student ;
+    :graduated true ;
+    :studentId "19760524-0046"^^xsd:string ;
+    :studentName "TA 46"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2005"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:TA_47 a :Student ;
+    :graduated true ;
+    :studentId "19780815-0047"^^xsd:string ;
+    :studentName "TA 47"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10061 ] .
+
+:TA_48 a :Student ;
+    :graduated true ;
+    :studentId "19790618-0048"^^xsd:string ;
+    :studentName "TA 48"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2002"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:TA_49 a :Student ;
+    :graduated true ;
+    :studentId "19790426-0049"^^xsd:string ;
+    :studentName "TA 49"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10034 ] .
+
+:TA_50 a :Student ;
+    :graduated true ;
+    :studentId "19760108-0050"^^xsd:string ;
+    :studentName "TA 50"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2005"^^xsd:string ;
+            :courseInstanceOf :Course10034 ] .
+
+:TA_51 a :Student ;
+    :graduated true ;
+    :studentId "19750417-0051"^^xsd:string ;
+    :studentName "TA 51"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2000"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:TA_52 a :Student ;
+    :graduated true ;
+    :studentId "19780317-0052"^^xsd:string ;
+    :studentName "TA 52"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:TA_53 a :Student ;
+    :graduated true ;
+    :studentId "19781217-0053"^^xsd:string ;
+    :studentName "TA 53"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2000"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:TA_54 a :Student ;
+    :graduated true ;
+    :studentId "19781130-0054"^^xsd:string ;
+    :studentName "TA 54"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2014"^^xsd:string ;
+            :courseInstanceOf :Course10034 ] .
+
+:TA_55 a :Student ;
+    :graduated true ;
+    :studentId "19761009-0055"^^xsd:string ;
+    :studentName "TA 55"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10011 ] .
+
+:TA_56 a :Student ;
+    :graduated true ;
+    :studentId "19750122-0056"^^xsd:string ;
+    :studentName "TA 56"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2012"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:TA_57 a :Student ;
+    :graduated true ;
+    :studentId "19780424-0057"^^xsd:string ;
+    :studentName "TA 57"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2003"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:TA_58 a :Student ;
+    :graduated true ;
+    :studentId "19770224-0058"^^xsd:string ;
+    :studentName "TA 58"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2013"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:TA_59 a :Student ;
+    :graduated true ;
+    :studentId "19750102-0059"^^xsd:string ;
+    :studentName "TA 59"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2004"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:TA_60 a :Student ;
+    :graduated true ;
+    :studentId "19750722-0060"^^xsd:string ;
+    :studentName "TA 60"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2000"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:TA_61 a :Student ;
+    :graduated false ;
+    :studentId "19930508-0061"^^xsd:string ;
+    :studentName "TA 61"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10051 ] .
+
+:TA_62 a :Student ;
+    :graduated false ;
+    :studentId "19931118-0062"^^xsd:string ;
+    :studentName "TA 62"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:TA_63 a :Student ;
+    :graduated false ;
+    :studentId "19900520-0063"^^xsd:string ;
+    :studentName "TA 63"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:TA_64 a :Student ;
+    :graduated false ;
+    :studentId "19900124-0064"^^xsd:string ;
+    :studentName "TA 64"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10011 ] .
+
+:TA_65 a :Student ;
+    :graduated false ;
+    :studentId "19920122-0065"^^xsd:string ;
+    :studentName "TA 65"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:TA_66 a :Student ;
+    :graduated false ;
+    :studentId "19931203-0066"^^xsd:string ;
+    :studentName "TA 66"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:TA_67 a :Student ;
+    :graduated false ;
+    :studentId "19910421-0067"^^xsd:string ;
+    :studentName "TA 67"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10032 ] .
+
+:TA_68 a :Student ;
+    :graduated false ;
+    :studentId "19910514-0068"^^xsd:string ;
+    :studentName "TA 68"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10074 ] .
+
+:TA_69 a :Student ;
+    :graduated false ;
+    :studentId "19911116-0069"^^xsd:string ;
+    :studentName "TA 69"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:TA_70 a :Student ;
+    :graduated false ;
+    :studentId "19920828-0070"^^xsd:string ;
+    :studentName "TA 70"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:TA_71 a :Student ;
+    :graduated false ;
+    :studentId "19901029-0071"^^xsd:string ;
+    :studentName "TA 71"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10033 ] .
+
+:TA_72 a :Student ;
+    :graduated false ;
+    :studentId "19920206-0072"^^xsd:string ;
+    :studentName "TA 72"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10034 ] .
+
+:TA_73 a :Student ;
+    :graduated false ;
+    :studentId "19920602-0073"^^xsd:string ;
+    :studentName "TA 73"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10041 ] .
+
+:TA_74 a :Student ;
+    :graduated false ;
+    :studentId "19900201-0074"^^xsd:string ;
+    :studentName "TA 74"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10011 ] .
+
+:TA_75 a :Student ;
+    :graduated false ;
+    :studentId "19920226-0075"^^xsd:string ;
+    :studentName "TA 75"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:TA_76 a :Student ;
+    :graduated false ;
+    :studentId "19900619-0076"^^xsd:string ;
+    :studentName "TA 76"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:TA_77 a :Student ;
+    :graduated false ;
+    :studentId "19910122-0077"^^xsd:string ;
+    :studentName "TA 77"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10052 ] .
+
+:TA_78 a :Student ;
+    :graduated false ;
+    :studentId "19910820-0078"^^xsd:string ;
+    :studentName "TA 78"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10021 ] .
+
+:TA_79 a :Student ;
+    :graduated false ;
+    :studentId "19931212-0079"^^xsd:string ;
+    :studentName "TA 79"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10042 ] .
+
+:TA_80 a :Student ;
+    :graduated false ;
+    :studentId "19900321-0080"^^xsd:string ;
+    :studentName "TA 80"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10013 ] .
+
+:TA_81 a :Student ;
+    :graduated false ;
+    :studentId "19910206-0081"^^xsd:string ;
+    :studentName "TA 81"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:TA_82 a :Student ;
+    :graduated false ;
+    :studentId "19930829-0082"^^xsd:string ;
+    :studentName "TA 82"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10011 ] .
+
+:TA_83 a :Student ;
+    :graduated false ;
+    :studentId "19900317-0083"^^xsd:string ;
+    :studentName "TA 83"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10054 ] .
+
+:TA_84 a :Student ;
+    :graduated false ;
+    :studentId "19910214-0084"^^xsd:string ;
+    :studentName "TA 84"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:TA_85 a :Student ;
+    :graduated false ;
+    :studentId "19901002-0085"^^xsd:string ;
+    :studentName "TA 85"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:TA_86 a :Student ;
+    :graduated false ;
+    :studentId "19930228-0086"^^xsd:string ;
+    :studentName "TA 86"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10011 ] .
+
+:TA_87 a :Student ;
+    :graduated false ;
+    :studentId "19901108-0087"^^xsd:string ;
+    :studentName "TA 87"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10051 ] .
+
+:TA_88 a :Student ;
+    :graduated false ;
+    :studentId "19920826-0088"^^xsd:string ;
+    :studentName "TA 88"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10034 ] .
+
+:TA_89 a :Student ;
+    :graduated false ;
+    :studentId "19900426-0089"^^xsd:string ;
+    :studentName "TA 89"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:TA_90 a :Student ;
+    :graduated false ;
+    :studentId "19900902-0090"^^xsd:string ;
+    :studentName "TA 90"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10071 ] .
+
+:TA_91 a :Student ;
+    :graduated false ;
+    :studentId "19911025-0091"^^xsd:string ;
+    :studentName "TA 91"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2016"^^xsd:string ;
+            :courseInstanceOf :Course10051 ] .
+
+:TA_92 a :Student ;
+    :graduated false ;
+    :studentId "19910817-0092"^^xsd:string ;
+    :studentName "TA 92"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+:TA_93 a :Student ;
+    :graduated false ;
+    :studentId "19920504-0093"^^xsd:string ;
+    :studentName "TA 93"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10014 ] .
+
+:TA_94 a :Student ;
+    :graduated false ;
+    :studentId "19921201-0094"^^xsd:string ;
+    :studentName "TA 94"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2019"^^xsd:string ;
+            :courseInstanceOf :Course10012 ] .
+
+:TA_95 a :Student ;
+    :graduated false ;
+    :studentId "19900128-0095"^^xsd:string ;
+    :studentName "TA 95"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2018"^^xsd:string ;
+            :courseInstanceOf :Course10031 ] .
+
+:TA_96 a :Student ;
+    :graduated false ;
+    :studentId "19910327-0096"^^xsd:string ;
+    :studentName "TA 96"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2021"^^xsd:string ;
+            :courseInstanceOf :Course10013 ] .
+
+:TA_97 a :Student ;
+    :graduated false ;
+    :studentId "19921208-0097"^^xsd:string ;
+    :studentName "TA 97"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10071 ] .
+
+:TA_98 a :Student ;
+    :graduated false ;
+    :studentId "19920217-0098"^^xsd:string ;
+    :studentName "TA 98"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2020"^^xsd:string ;
+            :courseInstanceOf :Course10072 ] .
+
+:TA_99 a :Student ;
+    :graduated false ;
+    :studentId "19931231-0099"^^xsd:string ;
+    :studentName "TA 99"^^xsd:string ;
+    :studentRegistered [ a :Registration ;
+            :courseInstanceAcademicYear "2017"^^xsd:string ;
+            :courseInstanceOf :Course10053 ] .
+
+<http://webprotege.stanford.edu/StudentEnrollment> a owl:Class ;
+    rdfs:label "StudentEnrollment" .
+
+<http://webprotege.stanford.edu/Teacher> a owl:Class ;
+    rdfs:label "Teacher" .
+
+<http://webprotege.stanford.edu/TeacherHours> a owl:Class ;
+    rdfs:label "TeacherHours" .
+
+<http://webprotege.stanford.edu/Department> a owl:Class ;
+    rdfs:label "Department" .
+
+<http://webprotege.stanford.edu/ProgrammeCourse> a owl:Class ;
+    rdfs:label "ProgrammeCourse" .
+
+<http://webprotege.stanford.edu/CoursePlanning> a owl:Class ;
+    rdfs:label <http://webprotege:ontology:9757d584-dec3-428d-9dc7-593bd0ec008c#/CoursePlanning> .
+
+<http://webprotege.stanford.edu/Division> a owl:Class ;
+    rdfs:label "Division" .
+
+<http://webprotege.stanford.edu/Registration> a owl:Class ;
+    rdfs:label "Registration" .
+
+<http://webprotege.stanford.edu/SeniorTeacher> a owl:Class ;
+    rdfs:label "SeniorTeacher" ;
+    rdfs:subClassOf <http://webprotege.stanford.edu/Teacher> .
+
+<http://webprotege.stanford.edu/Student> a owl:Class ;
+    rdfs:label "Student" .
+
+<http://webprotege.stanford.edu/Course> a owl:Class ;
+    rdfs:label "Course" .
+
+<http://webprotege.stanford.edu/Programme> a owl:Class ;
+    rdfs:label "Programme" .
+
+<http://webprotege.stanford.edu/CourseInstance> a owl:Class ;
+    rdfs:label "CourseInstance" ;
+    rdfs:subClassOf owl:Thing .
+
+:Course10001 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10001"^^xsd:string .
+
+:Course10013 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10013"^^xsd:string .
+
+:Course10054 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10054"^^xsd:string .
+
+:Course10032 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10032"^^xsd:string .
+
+:Course10034 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10034"^^xsd:string .
+
+:Course10051 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10051"^^xsd:string .
+
+:Course10061 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10061"^^xsd:string .
+
+:Course10031 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10031"^^xsd:string .
+
+:Course10071 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10071"^^xsd:string .
+
+:Course10072 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10072"^^xsd:string .
+
+:Course10074 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10074"^^xsd:string .
+
+:Course10052 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10052"^^xsd:string .
+
+:Course10073 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10073"^^xsd:string .
+
+:Course10011 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10011"^^xsd:string .
+
+:Course10021 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10021"^^xsd:string .
+
+:Course10033 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10033"^^xsd:string .
+
+:Course10053 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10053"^^xsd:string .
+
+:Course10012 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10012"^^xsd:string .
+
+:Course10014 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10014"^^xsd:string .
+
+:Course10042 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10042"^^xsd:string .
+
+:Course10041 a :Course ;
+    :courseBelongsTo :Division ;
+    :courseCode "10041"^^xsd:string .
+

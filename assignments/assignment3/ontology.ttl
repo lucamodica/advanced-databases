@@ -1,0 +1,386 @@
+@prefix : <urn:webprotege:ontology:9757d584-dec3-428d-9dc7-593bd0ec008c#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://webprotege:ontology:9757d584-dec3-428d-9dc7-593bd0ec008c#> .
+
+<urn:webprotege:ontology:9757d584-dec3-428d-9dc7-593bd0ec008c> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://webprotege.stanford.edu/courseBelongsTo
+<http://webprotege.stanford.edu/courseBelongsTo> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                 rdfs:domain <http://webprotege.stanford.edu/Course> ;
+                                                 rdfs:range <http://webprotege.stanford.edu/Division> ;
+                                                 rdfs:label "courseBelongsTo" .
+
+
+###  http://webprotege.stanford.edu/courseInstanceContains
+<http://webprotege.stanford.edu/courseInstanceContains> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/CourseInstance> ;
+                                                        rdfs:range <http://webprotege.stanford.edu/Registration> ;
+                                                        rdfs:label "courseInstanceContains" .
+
+
+###  http://webprotege.stanford.edu/courseInstanceHasPlan
+<http://webprotege.stanford.edu/courseInstanceHasPlan> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <http://webprotege.stanford.edu/CourseInstance> ;
+                                                       rdfs:range <http://webprotege.stanford.edu/CoursePlanning> ;
+                                                       rdfs:label "courseInstanceHasPlan" .
+
+
+###  http://webprotege.stanford.edu/courseInstanceOf
+<http://webprotege.stanford.edu/courseInstanceOf> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://webprotege.stanford.edu/CourseInstance> ;
+                                                  rdfs:range <http://webprotege.stanford.edu/Course> ;
+                                                  rdfs:label "courseInstanceOf" .
+
+
+###  http://webprotege.stanford.edu/courseOwnedBy
+<http://webprotege.stanford.edu/courseOwnedBy> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                               rdfs:domain <http://webprotege.stanford.edu/Course> ;
+                                               rdfs:range <http://webprotege.stanford.edu/Programme> ;
+                                               rdfs:label "courseOwnedBy" .
+
+
+###  http://webprotege.stanford.edu/divisionIn
+<http://webprotege.stanford.edu/divisionIn> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                            rdfs:domain <http://webprotege.stanford.edu/Division> ;
+                                            rdfs:range <http://webprotege.stanford.edu/Department> ;
+                                            rdfs:label "divisionIn" .
+
+
+###  http://webprotege.stanford.edu/programmeBelongsTo
+<http://webprotege.stanford.edu/programmeBelongsTo> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                                    rdfs:domain <http://webprotege.stanford.edu/Programme> ;
+                                                    rdfs:range <http://webprotege.stanford.edu/Department> ;
+                                                    rdfs:label "programmeBelongsTo" .
+
+
+###  http://webprotege.stanford.edu/seniorTeacherDirectorOf
+<http://webprotege.stanford.edu/seniorTeacherDirectorOf> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/SeniorTeacher> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/Programme> ;
+                                                         rdfs:label "seniorTeacherDirectorOf" .
+
+
+###  http://webprotege.stanford.edu/seniorTeacherExamines
+<http://webprotege.stanford.edu/seniorTeacherExamines> rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf owl:topObjectProperty ;
+                                                       rdfs:domain <http://webprotege.stanford.edu/SeniorTeacher> ;
+                                                       rdfs:range <http://webprotege.stanford.edu/CourseInstance> ;
+                                                       rdfs:label "seniorTeacherExamines" .
+
+
+###  http://webprotege.stanford.edu/studentRegistered
+<http://webprotege.stanford.edu/studentRegistered> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                   rdfs:domain <http://webprotege.stanford.edu/Student> ;
+                                                   rdfs:range <http://webprotege.stanford.edu/Registration> ;
+                                                   rdfs:label "studentRegistered" .
+
+
+###  http://webprotege.stanford.edu/teacherBelongsTo
+<http://webprotege.stanford.edu/teacherBelongsTo> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://webprotege.stanford.edu/Teacher> ;
+                                                  rdfs:range <http://webprotege.stanford.edu/Division> ;
+                                                  rdfs:label "teacherBelongsTo" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://webprotege.stanford.edu/courseCode
+<http://webprotege.stanford.edu/courseCode> rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                            rdfs:domain <http://webprotege.stanford.edu/Course> ;
+                                            rdfs:range xsd:string ;
+                                            rdfs:label "courseCode" .
+
+
+###  http://webprotege.stanford.edu/courseInstanceAcademicYear
+<http://webprotege.stanford.edu/courseInstanceAcademicYear> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                            rdfs:domain <http://webprotege.stanford.edu/CourseInstance> ;
+                                                            rdfs:range xsd:string ;
+                                                            rdfs:label "courseInstanceAcademicYear" .
+
+
+###  http://webprotege.stanford.edu/courseName
+<http://webprotege.stanford.edu/courseName> rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                            rdfs:domain <http://webprotege.stanford.edu/Course> ;
+                                            rdfs:range xsd:string ;
+                                            rdfs:label "courseName" .
+
+
+###  http://webprotege.stanford.edu/courseType
+<http://webprotege.stanford.edu/courseType> rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                            rdfs:domain <http://webprotege.stanford.edu/ProgrammeCourse> ;
+                                            rdfs:range xsd:string ;
+                                            rdfs:label "courseType" .
+
+
+###  http://webprotege.stanford.edu/departmentName
+<http://webprotege.stanford.edu/departmentName> rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf owl:topDataProperty ;
+                                                rdfs:domain <http://webprotege.stanford.edu/Department> ;
+                                                rdfs:range xsd:string ;
+                                                rdfs:label "departmentName" .
+
+
+###  http://webprotege.stanford.edu/divisionName
+<http://webprotege.stanford.edu/divisionName> rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                              rdfs:domain <http://webprotege.stanford.edu/Division> ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:label "divisionName" .
+
+
+###  http://webprotege.stanford.edu/enrollmentYear
+<http://webprotege.stanford.edu/enrollmentYear> rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf owl:topDataProperty ;
+                                                rdfs:domain <http://webprotege.stanford.edu/StudentEnrollment> ;
+                                                rdfs:range xsd:positiveInteger ;
+                                                rdfs:label "enrollementYear" .
+
+
+###  http://webprotege.stanford.edu/grade
+<http://webprotege.stanford.edu/grade> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                       rdfs:domain <http://webprotege.stanford.edu/Registration> ;
+                                       rdfs:range xsd:positiveInteger ;
+                                       rdfs:comment "For students who have completed the course, the grade is one of “5”, “4” or “3”." ;
+                                       rdfs:label "grade" .
+
+
+###  http://webprotege.stanford.edu/graduated
+<http://webprotege.stanford.edu/graduated> rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                           rdfs:domain <http://webprotege.stanford.edu/Student> ;
+                                           rdfs:range xsd:boolean ;
+                                           rdfs:label "graduated" .
+
+
+###  http://webprotege.stanford.edu/hours
+<http://webprotege.stanford.edu/hours> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                       rdfs:domain <http://webprotege.stanford.edu/TeacherHours> ;
+                                       rdfs:range xsd:positiveInteger ;
+                                       rdfs:label "hours" .
+
+
+###  http://webprotege.stanford.edu/hoursStatus
+<http://webprotege.stanford.edu/hoursStatus> rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                             rdfs:domain <http://webprotege.stanford.edu/TeacherHours> ;
+                                             rdfs:range xsd:string ;
+                                             rdfs:comment "It can be either \"assigned\" or \"reported\"" ;
+                                             rdfs:label "hoursStatus" .
+
+
+###  http://webprotege.stanford.edu/instanceId
+<http://webprotege.stanford.edu/instanceId> rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                            rdfs:domain <http://webprotege.stanford.edu/CourseInstance> ;
+                                            rdfs:range xsd:string ;
+                                            rdfs:label "instanceId" .
+
+
+###  http://webprotege.stanford.edu/planningNumStudents
+<http://webprotege.stanford.edu/planningNumStudents> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                     rdfs:domain <http://webprotege.stanford.edu/CoursePlanning> ;
+                                                     rdfs:range xsd:positiveInteger ;
+                                                     rdfs:label "planningNumStudents" .
+
+
+###  http://webprotege.stanford.edu/programmeCode
+<http://webprotege.stanford.edu/programmeCode> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                               rdfs:domain <http://webprotege.stanford.edu/Programme> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:label "programmeCode" .
+
+
+###  http://webprotege.stanford.edu/programmeCourseAcademicYear
+<http://webprotege.stanford.edu/programmeCourseAcademicYear> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                                             rdfs:domain <http://webprotege.stanford.edu/ProgrammeCourse> ;
+                                                             rdfs:range xsd:string ;
+                                                             rdfs:label "programmeCourseAcademicYear" .
+
+
+###  http://webprotege.stanford.edu/programmeName
+<http://webprotege.stanford.edu/programmeName> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                               rdfs:domain <http://webprotege.stanford.edu/Programme> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:label "programmeName" .
+
+
+###  http://webprotege.stanford.edu/programmeType
+<http://webprotege.stanford.edu/programmeType> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                               rdfs:domain <http://webprotege.stanford.edu/Programme> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:comment "It can be either \"master\" or \"bachelor\"" ;
+                                               rdfs:label "programmeType" .
+
+
+###  http://webprotege.stanford.edu/seniorPlannedHours
+<http://webprotege.stanford.edu/seniorPlannedHours> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                    rdfs:domain <http://webprotege.stanford.edu/CoursePlanning> ;
+                                                    rdfs:range xsd:positiveInteger ;
+                                                    rdfs:label "seniorPlannedHours" .
+
+
+###  http://webprotege.stanford.edu/status
+<http://webprotege.stanford.edu/status> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                        rdfs:domain <http://webprotege.stanford.edu/Registration> ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "status is one of: “not started”, “registered”, “completed”, “withdrawn”." ;
+                                        rdfs:label "status" .
+
+
+###  http://webprotege.stanford.edu/studentId
+<http://webprotege.stanford.edu/studentId> rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                           rdfs:domain <http://webprotege.stanford.edu/Student> ;
+                                           rdfs:range xsd:string ;
+                                           rdfs:label "studentId" .
+
+
+###  http://webprotege.stanford.edu/studentName
+<http://webprotege.stanford.edu/studentName> rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                             rdfs:domain <http://webprotege.stanford.edu/Student> ;
+                                             rdfs:range xsd:string ;
+                                             rdfs:label "studentName" .
+
+
+###  http://webprotege.stanford.edu/studyPeriod
+<http://webprotege.stanford.edu/studyPeriod> rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                             rdfs:domain <http://webprotege.stanford.edu/CourseInstance> ;
+                                             rdfs:range xsd:positiveInteger ;
+                                             rdfs:label "studyPeriod" .
+
+
+###  http://webprotege.stanford.edu/studyYear
+<http://webprotege.stanford.edu/studyYear> rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                           rdfs:domain <http://webprotege.stanford.edu/ProgrammeCourse> ;
+                                           rdfs:range xsd:positiveInteger ;
+                                           rdfs:label "studyYear" .
+
+
+###  http://webprotege.stanford.edu/teacherId
+<http://webprotege.stanford.edu/teacherId> rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                           rdfs:domain <http://webprotege.stanford.edu/SeniorTeacher> ;
+                                           rdfs:range xsd:string ;
+                                           rdfs:label "teacherId" .
+
+
+###  http://webprotege.stanford.edu/teacherName
+<http://webprotege.stanford.edu/teacherName> rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                             rdfs:domain <http://webprotege.stanford.edu/SeniorTeacher> ;
+                                             rdfs:range xsd:string ;
+                                             rdfs:label "teacherName" .
+
+
+###  http://webprotege.stanford.edu/teacherPlannedHours
+<http://webprotege.stanford.edu/teacherPlannedHours> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                     rdfs:domain <http://webprotege.stanford.edu/CoursePlanning> ;
+                                                     rdfs:range xsd:positiveInteger ;
+                                                     rdfs:label "teacherPlannedHours" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://webprotege.stanford.edu/Course
+<http://webprotege.stanford.edu/Course> rdf:type owl:Class ;
+                                        rdfs:label "Course" .
+
+
+###  http://webprotege.stanford.edu/CourseInstance
+<http://webprotege.stanford.edu/CourseInstance> rdf:type owl:Class ;
+                                                rdfs:subClassOf owl:Thing ;
+                                                rdfs:label "CourseInstance" .
+
+
+###  http://webprotege.stanford.edu/CoursePlanning
+<http://webprotege.stanford.edu/CoursePlanning> rdf:type owl:Class ;
+                                                rdfs:label <CoursePlanning> .
+
+
+###  http://webprotege.stanford.edu/Department
+<http://webprotege.stanford.edu/Department> rdf:type owl:Class ;
+                                            rdfs:label "Department" .
+
+
+###  http://webprotege.stanford.edu/Division
+<http://webprotege.stanford.edu/Division> rdf:type owl:Class ;
+                                          rdfs:label "Division" .
+
+
+###  http://webprotege.stanford.edu/Programme
+<http://webprotege.stanford.edu/Programme> rdf:type owl:Class ;
+                                           rdfs:label "Programme" .
+
+
+###  http://webprotege.stanford.edu/ProgrammeCourse
+<http://webprotege.stanford.edu/ProgrammeCourse> rdf:type owl:Class ;
+                                                 rdfs:label "ProgrammeCourse" .
+
+
+###  http://webprotege.stanford.edu/Registration
+<http://webprotege.stanford.edu/Registration> rdf:type owl:Class ;
+                                              rdfs:label "Registration" .
+
+
+###  http://webprotege.stanford.edu/SeniorTeacher
+<http://webprotege.stanford.edu/SeniorTeacher> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/Teacher> ;
+                                               rdfs:label "SeniorTeacher" .
+
+
+###  http://webprotege.stanford.edu/Student
+<http://webprotege.stanford.edu/Student> rdf:type owl:Class ;
+                                         rdfs:label "Student" .
+
+
+###  http://webprotege.stanford.edu/StudentEnrollment
+<http://webprotege.stanford.edu/StudentEnrollment> rdf:type owl:Class ;
+                                                   rdfs:label "StudentEnrollment" .
+
+
+###  http://webprotege.stanford.edu/Teacher
+<http://webprotege.stanford.edu/Teacher> rdf:type owl:Class ;
+                                         rdfs:label "Teacher" .
+
+
+###  http://webprotege.stanford.edu/TeacherHours
+<http://webprotege.stanford.edu/TeacherHours> rdf:type owl:Class ;
+                                              rdfs:label "TeacherHours" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
