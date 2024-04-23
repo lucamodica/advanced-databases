@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns="urn:webprotege:ontology:9757d584-dec3-428d-9dc7-593bd0ec008c#" xml:base="http://www.ldf.fi/service/rdf-serializer/">
+  <rdf:Description rdf:about="urn:webprotege:ontology:9757d584-dec3-428d-9dc7-593bd0ec008c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseBelongsTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseBelongsTo">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseBelongsTo">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Course"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseBelongsTo">
+    <rdfs:range rdf:resource="http://webprotege.stanford.edu/Division"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseBelongsTo">
+    <rdfs:label>courseBelongsTo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceContains">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceContains">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/CourseInstance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceContains">
+    <rdfs:range rdf:resource="http://webprotege.stanford.edu/Registration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceContains">
+    <rdfs:label>courseInstanceContains</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceHasPlan">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceHasPlan">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/CourseInstance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceHasPlan">
+    <rdfs:range rdf:resource="http://webprotege.stanford.edu/CoursePlanning"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceHasPlan">
+    <rdfs:label>courseInstanceHasPlan</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceOf">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/CourseInstance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceOf">
+    <rdfs:range rdf:resource="http://webprotege.stanford.edu/Course"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceOf">
+    <rdfs:label>courseInstanceOf</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseOwnedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseOwnedBy">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseOwnedBy">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Course"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseOwnedBy">
+    <rdfs:range rdf:resource="http://webprotege.stanford.edu/Programme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseOwnedBy">
+    <rdfs:label>courseOwnedBy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/divisionIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/divisionIn">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/divisionIn">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Division"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/divisionIn">
+    <rdfs:range rdf:resource="http://webprotege.stanford.edu/Department"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/divisionIn">
+    <rdfs:label>divisionIn</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeBelongsTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeBelongsTo">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeBelongsTo">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Programme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeBelongsTo">
+    <rdfs:range rdf:resource="http://webprotege.stanford.edu/Department"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeBelongsTo">
+    <rdfs:label>programmeBelongsTo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorTeacherDirectorOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorTeacherDirectorOf">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorTeacherDirectorOf">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/SeniorTeacher"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorTeacherDirectorOf">
+    <rdfs:range rdf:resource="http://webprotege.stanford.edu/Programme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorTeacherDirectorOf">
+    <rdfs:label>seniorTeacherDirectorOf</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorTeacherExamines">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorTeacherExamines">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorTeacherExamines">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/SeniorTeacher"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorTeacherExamines">
+    <rdfs:range rdf:resource="http://webprotege.stanford.edu/CourseInstance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorTeacherExamines">
+    <rdfs:label>seniorTeacherExamines</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentRegistered">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentRegistered">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentRegistered">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Student"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentRegistered">
+    <rdfs:range rdf:resource="http://webprotege.stanford.edu/Registration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentRegistered">
+    <rdfs:label>studentRegistered</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherBelongsTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherBelongsTo">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Teacher"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherBelongsTo">
+    <rdfs:range rdf:resource="http://webprotege.stanford.edu/Division"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherBelongsTo">
+    <rdfs:label>teacherBelongsTo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseCode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseCode">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseCode">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Course"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseCode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseCode">
+    <rdfs:label>courseCode</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceAcademicYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceAcademicYear">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceAcademicYear">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/CourseInstance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceAcademicYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseInstanceAcademicYear">
+    <rdfs:label>courseInstanceAcademicYear</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseName">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseName">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Course"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseName">
+    <rdfs:label>courseName</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseType">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseType">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/ProgrammeCourse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/courseType">
+    <rdfs:label>courseType</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/departmentName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/departmentName">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/departmentName">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Department"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/departmentName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/departmentName">
+    <rdfs:label>departmentName</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/divisionName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/divisionName">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/divisionName">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Division"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/divisionName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/divisionName">
+    <rdfs:label>divisionName</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/enrollmentYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/enrollmentYear">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/enrollmentYear">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/StudentEnrollment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/enrollmentYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/enrollmentYear">
+    <rdfs:label>enrollementYear</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/grade">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/grade">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/grade">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Registration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/grade">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/grade">
+    <rdfs:comment>For students who have completed the course, the grade is one of “5”, “4” or “3”.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/grade">
+    <rdfs:label>grade</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/graduated">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/graduated">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/graduated">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Student"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/graduated">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/graduated">
+    <rdfs:label>graduated</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/hours">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/hours">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/hours">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/TeacherHours"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/hours">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/hours">
+    <rdfs:label>hours</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/hoursStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/hoursStatus">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/hoursStatus">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/TeacherHours"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/hoursStatus">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/hoursStatus">
+    <rdfs:comment>It can be either "assigned" or "reported"</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/hoursStatus">
+    <rdfs:label>hoursStatus</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/instanceId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/instanceId">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/instanceId">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/CourseInstance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/instanceId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/instanceId">
+    <rdfs:label>instanceId</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/planningNumStudents">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/planningNumStudents">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/planningNumStudents">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/CoursePlanning"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/planningNumStudents">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/planningNumStudents">
+    <rdfs:label>planningNumStudents</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeCode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeCode">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeCode">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Programme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeCode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeCode">
+    <rdfs:label>programmeCode</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeCourseAcademicYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeCourseAcademicYear">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeCourseAcademicYear">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/ProgrammeCourse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeCourseAcademicYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeCourseAcademicYear">
+    <rdfs:label>programmeCourseAcademicYear</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeName">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeName">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Programme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeName">
+    <rdfs:label>programmeName</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeType">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeType">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Programme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeType">
+    <rdfs:comment>It can be either "master" or "bachelor"</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/programmeType">
+    <rdfs:label>programmeType</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorPlannedHours">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorPlannedHours">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorPlannedHours">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/CoursePlanning"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorPlannedHours">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/seniorPlannedHours">
+    <rdfs:label>seniorPlannedHours</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/status">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/status">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/status">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Registration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/status">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/status">
+    <rdfs:comment>status is one of: “not started”, “registered”, “completed”, “withdrawn”.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/status">
+    <rdfs:label>status</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentId">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentId">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Student"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentId">
+    <rdfs:label>studentId</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentName">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentName">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Student"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studentName">
+    <rdfs:label>studentName</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studyPeriod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studyPeriod">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studyPeriod">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/CourseInstance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studyPeriod">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studyPeriod">
+    <rdfs:label>studyPeriod</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studyYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studyYear">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studyYear">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/ProgrammeCourse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studyYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/studyYear">
+    <rdfs:label>studyYear</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherId">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherId">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/SeniorTeacher"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherId">
+    <rdfs:label>teacherId</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherName">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherName">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/SeniorTeacher"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherName">
+    <rdfs:label>teacherName</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherPlannedHours">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherPlannedHours">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherPlannedHours">
+    <rdfs:domain rdf:resource="http://webprotege.stanford.edu/CoursePlanning"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherPlannedHours">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/teacherPlannedHours">
+    <rdfs:label>teacherPlannedHours</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/Course">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/Course">
+    <rdfs:label>Course</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/CourseInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/CourseInstance">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/CourseInstance">
+    <rdfs:label>CourseInstance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/CoursePlanning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/CoursePlanning">
+    <rdfs:label rdf:resource="http://webprotege:ontology:9757d584-dec3-428d-9dc7-593bd0ec008cCoursePlanning"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/Department">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/Department">
+    <rdfs:label>Department</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/Division">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/Division">
+    <rdfs:label>Division</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/Programme">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/Programme">
+    <rdfs:label>Programme</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/ProgrammeCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/ProgrammeCourse">
+    <rdfs:label>ProgrammeCourse</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/Registration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/Registration">
+    <rdfs:label>Registration</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/SeniorTeacher">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/SeniorTeacher">
+    <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Teacher"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/SeniorTeacher">
+    <rdfs:label>SeniorTeacher</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/Student">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/Student">
+    <rdfs:label>Student</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/StudentEnrollment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/StudentEnrollment">
+    <rdfs:label>StudentEnrollment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/Teacher">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/Teacher">
+    <rdfs:label>Teacher</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/TeacherHours">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://webprotege.stanford.edu/TeacherHours">
+    <rdfs:label>TeacherHours</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
+
