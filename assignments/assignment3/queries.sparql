@@ -1,0 +1,148 @@
+# query 1: Find the name, director and department of all programmes.
+PREFIX ex: <http://assignment3.org/ontology#>
+
+SELECT ?programmeName ?teacherId ?teacherName ?departmentName
+WHERE {
+ 	?programme a ex:Programme .
+ 	?programme ex:programmeName ?programmeName .
+  	?programme ex:programmeDirectedBy ?director .
+    ?programme ex:programmeBelongsTo ?department .
+
+	?director a ex:SeniorTeacher .
+  	?director ex:teacherId ?teacherId .
+  	?director ex:teacherName ?teacherName .
+    
+    ?department a ex:Department .
+    ?department ex:departmentName ?departmentName
+}
+
+
+# query 2: Find the names of all students who worked as teaching assistants in courses given by the D3-2 division in study period 2 in academic year 2023/2024.
+PREFIX ex: <http://assignment3.org/ontology#>
+
+select ?studentName
+where {
+    ?student a ex:Student .
+    ?student ex:studentName ?studentName .
+    ?student ex:workAsTA ?ta .
+    
+    # Find TeacherHours instances related to teaching assistants
+  	?th a ex:TeacherHours .
+    ?th ex:teacherHoursIn ?ta .
+    ?th ex:courseHoursIn ?courseInstance .
+    
+	?courseInstance a ex:CourseInstance .
+    ?courseInstance ex:studyPeriod 2 .
+    ?courseInstance ex:courseInstanceAcademicYear "2023-2024" .
+    ?courseInstance ex:courseInstanceOf ?course .
+    
+    ?course a ex:Course .
+    ?course ex:courseBelongsTo ?division .
+    
+	# find the division name
+    ?division a ex:Division .
+    ?division ex:divisionName "D3-2" .
+}
+
+
+# query 3: Find all teachers who are assigned more than 120 hours in course 1015 in study period 1 in academic year 2018/2019.
+PREFIX ex: <http://assignment3.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?teacherId ?teacherName
+WHERE {
+    ?teacher rdf:type ?teacherType .
+	?teacherType rdfs:subClassOf* ex:Teacher .
+    ?teacher ex:teacherId ?teacherId .
+    ?teacher ex:teacherName ?teacherName .
+    
+    # Find TeacherHours instances related to teaching assistants
+  	?th a ex:TeacherHours .
+    ?th ex:teacherHoursIn ?teacher .
+    ?th ex:assignedHours ?hours .
+    ?th ex:courseHoursIn ?courseInstance .
+    
+	?courseInstance a ex:CourseInstance .
+    ?courseInstance ex:studyPeriod 1 .
+    ?courseInstance ex:courseInstanceAcademicYear "2018-2019" .
+    ?courseInstance ex:courseInstanceOf ?course .
+    
+    ?course a ex:Course .
+    ?course ex:courseCode 1015 .
+
+	FILTER (?hours > 120)
+}
+
+
+# query 4: Find all students registered for course instance I-910 that were not registered for course instance I-911.
+PREFIX ex: <http://assignment3.org/ontology#>
+
+select ?studentId ?studentName
+where {
+    ?registration a ex:Registration .
+    ?registration ex:studentRegistered ?student .
+    ?registration ex:registrationContainsInstance ?courseInstance .
+    
+    ?courseInstance a ex:CourseInstance .
+    ?courseInstance ex:instanceId "I-910" .
+    
+    ?student a ex:Student .
+    ?student ex:studentId ?studentId .
+    ?student ex:studentName ?studentName .
+    
+    minus {
+        ?registration a ex:Registration .
+        ?registration ex:studentRegistered ?student .
+        ?registration ex:registrationContainsInstance ?courseInstance .
+
+        ?courseInstance a ex:CourseInstance .
+        ?courseInstance ex:instanceId "I-911" .
+
+        ?student a ex:Student .
+        ?student ex:studentId ?studentId .
+        ?student ex:studentName ?studentName .
+	}
+}
+
+
+# query 5: Find all programmes along with the total number of owned courses. List the results in descending order of number of owned courses.
+PREFIX ex: <http://assignment3.org/ontology#>
+
+SELECT ?programme (COUNT(?course) AS ?numberOfCourses)
+WHERE {
+	?programmeCourse a ex:ProgrammeCourse .
+    ?programmeCourse ex:programmeCourseContains ?course .
+	?programmeCourse ex:programmeCourseBelongsTo ?programme .
+}
+GROUP BY ?programme
+ORDER BY DESC(?numberOfCourses)
+
+
+# query 6a: Find the number of: senior teachers
+PREFIX ex: <http://assignment3.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+select (COUNT(DISTINCT ?teacher) AS ?numberOfTeacher)
+where {
+    ?teacher a ex:SeniorTeacher
+}
+
+
+# query 6a: Find the number of: all people
+PREFIX ex: <http://assignment3.org/ontology#>
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT (COUNT(DISTINCT ?id) AS ?numberOfPeople)
+WHERE {
+    {
+        ?teacher rdf:type/rdfs:subClassOf* ex:Teacher .
+        ?teacher ex:teacherId ?id .
+    } UNION {
+        ?student rdf:type ex:Student .
+        ?student ex:studentId ?id .
+    }
+}
