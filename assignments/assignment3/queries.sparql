@@ -109,13 +109,16 @@ where {
 # query 5: Find all programmes along with the total number of owned courses. List the results in descending order of number of owned courses.
 PREFIX ex: <http://assignment3.org/ontology#>
 
-SELECT ?programme (COUNT(?course) AS ?numberOfCourses)
+SELECT ?programmeCode (COUNT(?course) AS ?numberOfCourses)
 WHERE {
 	?programmeCourse a ex:ProgrammeCourse .
     ?programmeCourse ex:programmeCourseContains ?course .
 	?programmeCourse ex:programmeCourseBelongsTo ?programme .
+    
+    ?programme a ex:Programme .
+    ?programme ex:programmeCode ?programmeCode .
 }
-GROUP BY ?programme
+GROUP BY ?programmeCode
 ORDER BY DESC(?numberOfCourses)
 
 
