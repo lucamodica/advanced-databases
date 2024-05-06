@@ -49,8 +49,9 @@ where {
 PREFIX ex: <http://assignment3.org/ontology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?teacherId ?teacherName
+SELECT DISTINCT ?teacherId ?teacherName (xsd:float(?assignedHourss) as ?assignedHours)
 WHERE {
     ?teacher rdf:type ?teacherType .
 	?teacherType rdfs:subClassOf* ex:Teacher .
@@ -60,7 +61,7 @@ WHERE {
     # Find TeacherHours instances related to teaching assistants
   	?th a ex:TeacherHours .
     ?th ex:teacherHoursIn ?teacher .
-    ?th ex:assignedHours ?hours .
+    ?th ex:assignedHours ?assignedHourss .
     ?th ex:courseHoursIn ?courseInstance .
     
 	?courseInstance a ex:CourseInstance .
@@ -71,7 +72,7 @@ WHERE {
     ?course a ex:Course .
     ?course ex:courseCode 1015 .
 
-	FILTER (?hours > 120)
+	FILTER (?assignedHourss > 120)
 }
 
 
@@ -109,16 +110,21 @@ where {
 # query 5: Find all programmes along with the total number of owned courses. List the results in descending order of number of owned courses.
 PREFIX ex: <http://assignment3.org/ontology#>
 
-SELECT ?programmeCode (COUNT(?course) AS ?numberOfCourses)
+SELECT ?programmeCode ?programmeName ?numberOfCourses
 WHERE {
-	?programmeCourse a ex:ProgrammeCourse .
-    ?programmeCourse ex:programmeCourseContains ?course .
-	?programmeCourse ex:programmeCourseBelongsTo ?programme .
-    
     ?programme a ex:Programme .
     ?programme ex:programmeCode ?programmeCode .
+    ?programme ex:programmeName ?programmeName .
+    
+    {select ?programme (COUNT(?course) AS ?numberOfCourses)
+        where {
+            ?course a ex:Course .
+            ?course ex:courseOwnedBy ?programme .
+        }
+        group by ?programme
+    }
+    
 }
-GROUP BY ?programmeCode
 ORDER BY DESC(?numberOfCourses)
 
 
