@@ -7,8 +7,6 @@ match (th)-[:courseHoursIn]->(cInstance:CourseInstance)
 where cInstance.courseInstanceAcademicYear = "2023-2024"
     and cInstance.studyPeriod = 2
 
-match (cInstance)-[:courseInstanceOf]->(c:Course)
-match (c)-[:courseBelongsTo]->(d:Division)
-where d.divisionName = "D3-2"
+match (cInstance)-[:courseInstanceOf]->(c:Course)-[:courseBelongsTo]->(d:Division {divisionName: "D3-2"})
 
 return s.studentName as studentName
