@@ -31,7 +31,7 @@ where {
     ?th ex:teacherHoursIn ?ta .
     ?th ex:courseHoursIn ?courseInstance .
     
-	?courseInstance a ex:CourseInstance .
+	?courseInstance a ex:CourseInstance     .
     ?courseInstance ex:studyPeriod 2 .
     ?courseInstance ex:courseInstanceAcademicYear "2023-2024" .
     ?courseInstance ex:courseInstanceOf ?course .
@@ -66,6 +66,7 @@ WHERE {
     
 	?courseInstance a ex:CourseInstance .
     ?courseInstance ex:studyPeriod 1 .
+
     ?courseInstance ex:courseInstanceAcademicYear "2018-2019" .
     ?courseInstance ex:courseInstanceOf ?course .
     
@@ -139,7 +140,7 @@ where {
 }
 
 
-# query 6a: Find the number of: all people
+# query 6b: Find the number of: all people
 PREFIX ex: <http://assignment3.org/ontology#>
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
