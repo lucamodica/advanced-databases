@@ -6,4 +6,4 @@ call {
   match (student:Student)
   return student.studentId as id
 }
-return count(distinct id) as numberOfPeopleDISTINCT
+return count(distinct id) as numberOfPeople
